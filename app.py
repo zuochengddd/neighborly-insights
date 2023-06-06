@@ -1,10 +1,12 @@
 import os
 import openai
 from flask import Flask, redirect, render_template, request, url_for,jsonify, g
+from flask_cors import CORS
 
 from general_prompt import build_general_insights_prompt, get_insights_json
 
 app = Flask(__name__)
+CORS(app)
 def initialize_map():
     g.messages = [
         {"role": "assistant", "content": "I am a helpful chatbot for Doordash"}
@@ -31,10 +33,12 @@ def index():
 
 @app.route('/question', methods=['POST'])
 def process_questions():
+
     new_questions = request.json.get('questions')
+    print("quesiton is:" + new_questions)
     response = {
         'message': 'Received questions successfully',
-        'questions': generate_reply(new_questions)
+        'reply': generate_reply(new_questions)
     }
     return jsonify(response), 200
 
