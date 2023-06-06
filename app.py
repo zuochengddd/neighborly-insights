@@ -2,7 +2,7 @@ import os
 
 import openai
 import json
-from flask import Flask, redirect, render_template, request, url_for
+from flask import Flask, redirect, render_template, request, url_for,jsonify
 
 
 general_prompt_tempalte ="""
@@ -37,6 +37,15 @@ def index():
     result = request.args.get("result")
     return render_template("index.html", result=result)
 
+
+@app.route('/question', methods=['POST'])
+def process_questions():
+    questions = request.json.get('questions')
+    response = {
+        'message': 'Received questions successfully',
+        'questions': questions
+    }
+    return jsonify(response), 200
 
 def build_general_insights_prompt(json_data):
     location = json_data["storeDetails"]["location"]

@@ -35,6 +35,7 @@ Clone this repository.
 
    ```bash
    $ flask run
+   $ curl -X POST -H "Content-Type: application/json" -d '{"questions": "How are you?"}' http://localhost:5000/question
    ```
 
 You should now be able to access the app at [http://localhost:5000](http://localhost:5000)! 
