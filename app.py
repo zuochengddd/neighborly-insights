@@ -50,7 +50,7 @@ def generate_reply(input):
     Try inspiring me with actions to take and prompt my next question.
     When you mention the store names, always decorate it as a HTML <a> link with the inner text as the store name, and href as the store's link.
     The whole response should be html markup which is ready to be inserted into a web page.
-    Avoid mentioned detailed similarity score and inflation rate number.
+    Avoid mentioning detailed score, just compare.
     """
 
     cache['messages'].append(
