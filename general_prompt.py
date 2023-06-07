@@ -4,6 +4,14 @@ import openai
 
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
+general_prompt_tempalte ="""
+Here are the general information of our store:
+Our store detail info : {store_details}.
+Our store sales info : {store_sales}.
+Our store doordash reviews : {store_reivews}.
+Our store neighborly insight metrics info: {store_metrics}
+"""
+
 def build_general_insights_prompt(json_data):
 
     store_details = build_store_details_prompt(json_data)
