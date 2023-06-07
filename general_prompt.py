@@ -99,7 +99,7 @@ def build_store_metrics_prompt(json_data):
     Below are the metrics analysis data for the stores comparison. When we need to evealute and analysis the our store data with others, we will evaulate prioritze the metrics based on priority scores in decending orders.
     """
     store_metrics_prompt_template = """
-    For metric {metric}, the priority score is {priority_score}, value is {value}. If an recommendation is needed to improve this metric, suggest user like: {improvement}, please also convert this <herf>{link}</herf> to an HTML URL link in resonse, otherwise, encourage user to keep the good work, like: {encouragement}.
+    For metric {metric}, the priority score is {priority_score}, value is {value}. If an recommendation is needed to improve this metric, suggest user like: {improvement}, please also convert this {link} to an HTML URL link in resonse, otherwise, encourage user to keep the good work, like: {encouragement}.
     """
 
     metrics = json_data["IndividualCompetitorAnalysis"]["metrics"]
