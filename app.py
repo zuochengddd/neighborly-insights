@@ -49,16 +49,28 @@ def generate_reply(input):
     decorated_user_question = input + """
     Try inspiring me with actions to take and prompt my next question.
     When you mention the store names, always decorate it as a HTML <a> link with the inner text as the store name, and href as the store's link.
+    The whole response should be html markup which is ready to be inserted into a web page.
+    Avoid mentioned detailed similarity score and inflation rate number.
     """
 
     cache['messages'].append(
+        {"role": "user", "content": decorated_user_question}
+    )
+    messages = []
+    messages.append(
+        {"role": "assistant", "content": "I am a helpful chatbot for Doordash"}
+    )
+    messages.append(
+        {"role": "assistant", "content": cache['initial_prompt']}
+    )
+    messages.append(
         {"role": "user", "content": decorated_user_question}
     )
 
     # instead of providing raw data to open ai, we will call our internal services to build filtered analysis data
     response = openai.ChatCompletion.create(
         model="gpt-3.5-turbo",
-        messages=cache['messages']
+        messages=messages
     )
 
     result = response.choices[0].message.content
