@@ -43,9 +43,14 @@ def generate_reply(input):
             {"role": "assistant", "content": "I am a helpful chatbot for Doordash"}
         )
         cache['messages'].append(
-            {"role": "system", "content": cache['initial_prompt']}
+            {"role": "assistant", "content": cache['initial_prompt']}
         )
-    decorated_user_question = input + ". Try inspiring me with actions to take and prompt my next question"
+
+    decorated_user_question = input + """
+    Try inspiring me with actions to take and prompt my next question.
+    When you mention the store names, always decorate it as a HTML <a> link with the inner text as the store name, and href as the store's link.
+    """
+
     cache['messages'].append(
         {"role": "user", "content": decorated_user_question}
     )
