@@ -76,7 +76,7 @@
              "recommendedActions":[
                 {
                    "actionType":"url",
-                   "link":"manual-add-photo-portal",
+                   "link":"https://www.doordash.com/merchant/menu/v2/15212352/?store_id=23781528",
                    "ImproventPrompt":"Low photo coverage could lead consumer confusion and lower order rate on items. Hisotrical data indicate 20% lower order rate when your photo coverage is below 90%",
                    "EncouragementPrompt":"Awesome! Most of your menu items have been covered by photos, you did much better job than your competitors"
                 }
@@ -96,7 +96,7 @@
              "recommendedActions":[
                 {
                    "actionType":"url",
-                   "link":"manual-add-photo-portal",
+                   "link":"https://www.doordash.com/merchant/menu/v2/15212352/?store_id=23781528",
                    "ImproventPrompt":"add the missing categories in you menu if possible. This will give consumer more choices when ordering.",
                    "EncouragementPrompt":"You menu covered most of the popular categories"
                 }
