@@ -5,6 +5,14 @@ from flask_cors import CORS
 
 from general_prompt import build_general_insights_prompt, get_insights_json
 
+general_prompt_tempalte ="""
+Here are the general information of our store:
+Our store detail info : {store_details}.
+Our store sales info : {store_sales}.
+Our store doordash reviews : {store_reivews}.
+Our store neighborly insight metrics info: {store_metrics}
+"""
+
 app = Flask(__name__)
 CORS(app)
 def initialize_map():
@@ -41,7 +49,6 @@ def process_questions():
         'reply': generate_reply(new_questions)
     }
     return jsonify(response), 200
-
 
 def generate_reply(input):
     if g.initial_prompt is None:

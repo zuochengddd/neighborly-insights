@@ -15,14 +15,14 @@
              "mySalePastQuarter":"10000",
              "averageNeighborsSale":"12030",
              "soldAmount":"1000",
-             "verageNeighborSoldAmount":"6000"
+             "averageNeighborSoldAmount":"6000"
           },
           {
              "category":"soft drink",
              "mySalePastQuarter":"4000",
              "averageNeighborsSale":"2000",
              "soldAmount":"1000",
-             "verageNeighborSoldAmount":"6000"
+             "averageNeighborSoldAmount":"6000"
           },
           {
              "category":"side",
@@ -46,11 +46,18 @@
              "averageNeighborSoldAmount":"2000"
           }
        ],
-       "reviewComparison":"There are more positive mentioning of the signature hamburger compared with other similar stores"
+       "reviews": {
+            "rating": "4.5",
+            "averageNeighborRating": "4",
+            "most_liked": "signature sushi",
+            "most_disliked": "service"
+         }
+       
     },
     "IndividualCompetitorAnalysis":{
-       "metrics":{
-          "inflationRate":{
+       "metrics":[
+          {
+            "name": "inflationRate",
              "value":1.23,
              "priorityScore":5,
              "recommendedActions":[
@@ -62,7 +69,8 @@
                 }
              ]
           },
-          "photoCoverage":{
+          {
+            "name": "photoCoverage",
              "value":0.8,
              "priorityScore":5,
              "recommendedActions":[
@@ -74,7 +82,8 @@
                 }
              ]
           },
-          "menuVariety":{
+          {
+            "name": "menuVariety",
              "value":0.9,
              "tags":[
                 "entree",
@@ -93,7 +102,8 @@
                 }
              ]
           },
-          "promotionAdoption":{
+         {
+            "name": "promotionAdoption",
              "value":0,
              "priorityScore":4,
              "recommendedActions":[
@@ -105,9 +115,10 @@
                 }
              ]
           },
-          "AdsAdoption":{
+          {
+            "name": "AdsAdoption",
              "value":1,
-             "prioerityScore":4,
+             "priorityScore":4,
              "recommendedActions":[
                 {
                    "actionType":"url",
@@ -117,7 +128,7 @@
                 }
              ]
           }
-       },
+         ],
        "comps":[
           {
              "similarityScore":0.899,
@@ -132,11 +143,11 @@
              },
              "metrics":{
                 "inflationRate":{
-                   "score":0.5,
+                   "value":0.5,
                    "isBetterThanPrimary":true
                 },
                 "photoCoverage":{
-                   "score":0.9,
+                   "value":0.9,
                    "isBetterThanPrimary":true
                 },
                 "menuVariety":{
@@ -167,11 +178,11 @@
              },
              "metrics":{
                 "inflationRate":{
-                   "score":0.3,
+                   "value":1.3,
                    "isBetterThanPrimary":false
                 },
                 "photoCoverage":{
-                   "score":0.8,
+                   "value":0.8,
                    "isBetterThanPrimary":true
                 },
                 "menuVariety":{
@@ -203,11 +214,11 @@
              },
              "metrics":{
                 "inflationRate":{
-                   "score":0.8,
+                   "value":0.8,
                    "isBetterThanPrimary":true
                 },
                 "photoCoverage":{
-                   "score":0.7,
+                   "value":0.7,
                    "isBetterThanPrimary":false
                 },
                 "menuVariety":{
@@ -240,11 +251,11 @@
              },
              "metrics":{
                 "inflationRate":{
-                   "score":0.6,
+                   "value":0.6,
                    "isBetterThanPrimary":false
                 },
                 "photoCoverage":{
-                   "score":0.6,
+                   "value":0.6,
                    "isBetterThanPrimary":false
                 },
                 "menuVariety":{
@@ -276,11 +287,11 @@
              },
              "metrics":{
                 "inflationRate":{
-                   "score":0.7,
+                   "value":0.7,
                    "isBetterThanPrimary":true
                 },
                 "photoCoverage":{
-                   "score":0.9,
+                   "value":0.9,
                    "isBetterThanPrimary":true
                 },
                 "menuVariety":{
@@ -313,11 +324,11 @@
              },
              "metrics":{
                 "inflationRate":{
-                   "score":0.4,
+                   "value":1.4,
                    "isBetterThanPrimary":false
                 },
                 "photoCoverage":{
-                   "score":0.7,
+                   "value":0.7,
                    "isBetterThanPrimary":false
                 },
                 "menuVariety":{
@@ -349,11 +360,11 @@
              },
              "metrics":{
                 "inflationRate":{
-                   "score":0.6,
+                   "value":0.6,
                    "isBetterThanPrimary":false
                 },
                 "photoCoverage":{
-                   "score":0.8,
+                   "value":0.8,
                    "isBetterThanPrimary":true
                 },
                 "menuVariety":{
@@ -385,11 +396,11 @@
              },
              "metrics":{
                 "inflationRate":{
-                   "score":0.9,
+                   "value":0.9,
                    "isBetterThanPrimary":true
                 },
                 "photoCoverage":{
-                   "score":0.6,
+                   "value":0.6,
                    "isBetterThanPrimary":false
                 },
                 "menuVariety":{
@@ -423,11 +434,11 @@
              },
              "metrics":{
                 "inflationRate":{
-                   "score":0.5,
+                   "value":0.5,
                    "isBetterThanPrimary":true
                 },
                 "photoCoverage":{
-                   "score":0.8,
+                   "value":0.8,
                    "isBetterThanPrimary":true
                 },
                 "menuVariety":{
@@ -460,11 +471,11 @@
              },
              "metrics":{
                 "inflationRate":{
-                   "score":0.4,
+                   "value":0.4,
                    "isBetterThanPrimary":false
                 },
                 "photoCoverage":{
-                   "score":0.7,
+                   "value":0.7,
                    "isBetterThanPrimary":false
                 },
                 "menuVariety":{
