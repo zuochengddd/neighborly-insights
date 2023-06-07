@@ -46,6 +46,7 @@ def generate_reply(input):
     if g.initial_prompt is None:
         json_data = get_insights_json()
         g.initial_prompt = build_general_insights_prompt(json_data)
+        # print(g.initial_prompt)
         g.messages.append(
             {"role": "system", "content": g.initial_prompt}
         )
@@ -62,7 +63,7 @@ def generate_reply(input):
     )
 
     result = response.choices[0].message.content
-
+    print(response)
     g.messages.append(
         {"role": "assistant", "content": result}
     )

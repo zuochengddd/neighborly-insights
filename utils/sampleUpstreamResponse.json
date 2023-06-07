@@ -134,7 +134,8 @@
              "similarityScore":0.899,
              "storeId":45678,
              "storeDetails":{
-                "name":"Sushi Delight",
+                "name":"Sushi Blue",
+                "link": "https://www.doordash.com/store/sushi-blue-lynnwood-467348/",
                 "location":{
                    "city":"Seattle",
                    "state":"Washington",
@@ -170,6 +171,7 @@
              "storeId":78901,
              "storeDetails":{
                 "name":"Sushi World",
+                "link": "https://www.doordash.com/store/sushi-blue-lynnwood-467348/",
                 "location":{
                    "city":"Seattle",
                    "state":"Washington",
@@ -206,6 +208,7 @@
              "storeId":23456,
              "storeDetails":{
                 "name":"Sushi Time",
+                "link": "https://www.doordash.com/store/sushi-blue-lynnwood-467348/",
                 "location":{
                    "city":"Seattle",
                    "state":"Washington",
@@ -243,6 +246,7 @@
              "storeId":12345,
              "storeDetails":{
                 "name":"Sushi Avenue",
+                "link": "https://www.doordash.com/store/sushi-blue-lynnwood-467348/",
                 "location":{
                    "city":"Seattle",
                    "state":"Washington",
@@ -279,6 +283,7 @@
              "storeId":56789,
              "storeDetails":{
                 "name":"Sushi Palace",
+                "link": "https://www.doordash.com/store/sushi-blue-lynnwood-467348/",
                 "location":{
                    "city":"Seattle",
                    "state":"Washington",
@@ -316,6 +321,7 @@
              "storeId":24680,
              "storeDetails":{
                 "name":"Sushi Garden",
+                "link": "https://www.doordash.com/store/sushi-blue-lynnwood-467348/",
                 "location":{
                    "city":"Seattle",
                    "state":"Washington",
@@ -352,6 +358,7 @@
              "storeId":13579,
              "storeDetails":{
                 "name":"Sushi Corner",
+                "link": "https://www.doordash.com/store/sushi-blue-lynnwood-467348/",
                 "location":{
                    "city":"Seattle",
                    "state":"Washington",
@@ -388,6 +395,7 @@
              "storeId":10203,
              "storeDetails":{
                 "name":"Sushi Station",
+                "link": "https://www.doordash.com/store/sushi-blue-lynnwood-467348/",
                 "location":{
                    "city":"Seattle",
                    "state":"Washington",
@@ -426,6 +434,7 @@
              "storeId":30405,
              "storeDetails":{
                 "name":"Sushi Market",
+                "link": "https://www.doordash.com/store/sushi-blue-lynnwood-467348/",
                 "location":{
                    "city":"Seattle",
                    "state":"Washington",
@@ -463,6 +472,7 @@
              "storeId":60708,
              "storeDetails":{
                 "name":"Sushi Bistro",
+                "link": "https://www.doordash.com/store/sushi-blue-lynnwood-467348/",
                 "location":{
                    "city":"Seattle",
                    "state":"Washington",

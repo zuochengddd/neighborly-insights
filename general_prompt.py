@@ -5,6 +5,8 @@ import openai
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
 general_prompt_tempalte ="""
+Reply should be in a fomrat of HTML markup. When incldue a web link, written as html markup, and when you mention the store name, make it a href link.
+
 Here are the general information of our store:
 Our store detail info : {store_details}.
 Our store sales info : {store_sales}.
@@ -47,7 +49,7 @@ def build_store_details_prompt(json_data):
     
     prompt = prompt + our_store
     nearby_stores_template = """
-    Store name: {name}, Address: {address}, {city}, {state}, and similarity score compared to our store: {score}.
+    Store name: {name}, Address: {address}, {city}, {state}, web link <herf>{link}</herf> and similarity score compared to our store: {score}.
     """
 
     nearby_stores = json_data["IndividualCompetitorAnalysis"]["comps"]
@@ -57,7 +59,8 @@ def build_store_details_prompt(json_data):
             address = store["storeDetails"]["location"]["address"],
             city = store["storeDetails"]["location"]["city"],
             state = store["storeDetails"]["location"]["state"],
-            score = store["similarityScore"]
+            score = store["similarityScore"],
+            link = store["storeDetails"]["link"]
         )
     return prompt
 
@@ -96,7 +99,7 @@ def build_store_metrics_prompt(json_data):
     Below are the metrics analysis data for the stores comparison. When we need to evealute and analysis the our store data with others, we will evaulate prioritze the metrics based on priority scores in decending orders.
     """
     store_metrics_prompt_template = """
-    For metric {metric}, the priority score is {priority_score}, value is {value}. If an recommendation is needed to improve this metric, suggest user like: {improvement}, please also convert this {link} to an HTML URL link in resonse, otherwise, encourage user to keep the good work, like: {encouragement}.
+    For metric {metric}, the priority score is {priority_score}, value is {value}. If an recommendation is needed to improve this metric, suggest user like: {improvement}, please also convert this <herf>{link}</herf> to an HTML URL link in resonse, otherwise, encourage user to keep the good work, like: {encouragement}.
     """
 
     metrics = json_data["IndividualCompetitorAnalysis"]["metrics"]
@@ -121,14 +124,13 @@ def build_store_metrics_prompt(json_data):
     """
     for store in other_stores:
         prompt = prompt + other_store_metrics_summary.format(
-            store = store["storeDetails"]["name"],
+            store = store["storeDetails"],
             inflation = store["metrics"]["inflationRate"],
             photoCoverage = store["metrics"]["photoCoverage"],
             menuVariety = store["metrics"]["menuVariety"],
             promotionAdoption = store["metrics"]["promotionAdoption"],
             adsAdoption = store["metrics"]["adsAdoption"]
         )
-    print(prompt)
     return prompt
 
 def get_insights_json():
