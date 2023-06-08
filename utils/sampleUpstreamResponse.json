@@ -84,13 +84,11 @@
           },
           {
             "name": "menuVariety",
-             "value":0.9,
+             "value":0.5,
              "tags":[
                 "entree",
                 "dessert",
-                "alcohol",
-                "vegan",
-                "veggie"
+                "alcohol"
              ],
              "priorityScore":3,
              "recommendedActions":[
