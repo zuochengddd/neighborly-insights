@@ -117,7 +117,7 @@
           },
           {
             "name": "AdsAdoption",
-             "value":1,
+             "value":0,
              "priorityScore":4,
              "recommendedActions":[
                 {
